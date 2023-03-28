@@ -35,14 +35,15 @@ class WelcomePage extends StatelessWidget {
                 ]
               ),
             ),
-            // Expanded(
-            //   child: Image.asset(''),
-            // ),
+            const Spacer(),
+            Image.asset('assets/images/pokemon_logo.png', height: 160),
+            const Spacer(),
             FloatingActionButton(
               onPressed: () {},
               backgroundColor: kYellowColor,
               child: const Icon(Icons.arrow_forward_rounded),
             ),
+            const SizedBox(height: 40),
           ],
         ),
       ),
