@@ -21,6 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhiteColor,
       body: body(),
     );
   }
@@ -69,13 +70,13 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Username', style: regularYellowMediumTextStyle),
+                          Text('Name', style: regularYellowMediumTextStyle),
                           const SizedBox(height: 5),
-                          InputTextField(icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _usernameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name'),
+                          InputTextField(label: 'Name', icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _usernameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name', minLength: 6),
                           const SizedBox(height: 20),
                           Text('Password', style: regularYellowMediumTextStyle),
                           const SizedBox(height: 5),
-                          InputPasswordField(icon: const Icon(Icons.lock_rounded, color: kYellowColor), hint: 'Enter your password', textEditingController: _passwordController, textInputType: TextInputType.text, textInputAction: TextInputAction.done, obscureText: true, validatorMessage: 'Please enter your password'),
+                          InputPasswordField(label: 'Password', icon: const Icon(Icons.lock_rounded, color: kYellowColor), hint: 'Enter your password', textEditingController: _passwordController, textInputType: TextInputType.text, textInputAction: TextInputAction.done, obscureText: true, validatorMessage: 'Please enter your password'),
                           const SizedBox(height: 60),
                           Column(
                             mainAxisSize: MainAxisSize.max,

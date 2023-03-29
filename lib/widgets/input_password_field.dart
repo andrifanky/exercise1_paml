@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class InputPasswordField extends StatefulWidget {
   InputPasswordField({
     super.key,
+    required this.label,
     required this.icon,
     required this.hint,
     required this.textEditingController,
@@ -13,6 +14,7 @@ class InputPasswordField extends StatefulWidget {
     required this.validatorMessage
   });
 
+  final String label;
   final Icon icon;
   final String hint;
   final TextEditingController textEditingController;
