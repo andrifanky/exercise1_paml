@@ -23,8 +23,7 @@ class MyApp extends StatelessWidget {
           ),
         )
       ),
-      home: const HomePage(name: 'Andri Fanky'),
-      // home: const WelcomePage(),
+      home: const WelcomePage(),
     );
   }
 }

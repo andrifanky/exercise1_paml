@@ -1,4 +1,5 @@
 import 'package:exercise1_paml/auth/register_page.dart';
+import 'package:exercise1_paml/home/home_page.dart';
 import 'package:exercise1_paml/themes.dart';
 import 'package:exercise1_paml/widgets/input_password_field.dart';
 import 'package:exercise1_paml/widgets/input_text_field.dart';
@@ -88,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                                   onPressed: () {
                                     if (_formKey.currentState!.validate()) {
                                       _formKey.currentState!.save();
-                                      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(username: _usernameController.text)));
+                                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomePage(name: _nameController.text)), (route) => false);
                                     }
                                   },
                                   style: ButtonStyle(
