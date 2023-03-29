@@ -1,0 +1,30 @@
+[
+    {
+        "number": "001",
+        "name": "bulbasaur",
+        "image_src": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+        "type": ["Grass","Poison"],
+        "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the suns rays, the seed grows progressively larger."
+    },
+    {
+        "number": "002",
+        "name": "ivysaur",
+        "image_src": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+        "type": ["Grass","Poison"],
+        "description": "There is a bud on this Pokemons back. To support its weight, Ivysaurs legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, its a sign that the bud will bloom into a large flower soon."
+    },
+    {
+        "number": "003",
+        "name": "venusaur",
+        "image_src": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+        "type": ["Grass","Poison"],
+        "description": "There is a large flower on Venusaurs back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flowers aroma soothes the emotions of people."
+    },
+    {
+        "number": "004",
+        "name": "charmander",
+        "image_src": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+        "type": ["Fire"],
+        "description": "The flame that bums at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes encaged, the flame burns fiercely."
+    }
+]

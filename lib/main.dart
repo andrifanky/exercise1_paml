@@ -1,4 +1,5 @@
 import 'package:exercise1_paml/auth/welcome_page.dart';
+import 'package:exercise1_paml/home/home_page.dart';
 import 'package:exercise1_paml/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
           ),
         )
       ),
-      home: const WelcomePage(),
+      home: const HomePage(name: 'Andri Fanky'),
+      // home: const WelcomePage(),
     );
   }
 }

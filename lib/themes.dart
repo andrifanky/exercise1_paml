@@ -10,6 +10,8 @@ const Color kDarkGreyColor = Color(0xff657786);
 const Color kLightGreyColor = Color(0xffAAB8C2);
 const Color kYellowColor = Color(0xffECAD00);
 const Color kBlueColor = Color(0xff2196F3);
+const Color kGreenColor = Color(0xff329636);
+const Color kPurpleColor = Color(0xff87129A);
 
 TextStyle regularBlackTextStyle = const TextStyle(
   color: kBlackColor
@@ -84,6 +86,11 @@ TextStyle smallBlackTextStyle = const TextStyle(
 
 TextStyle smallWhiteTextStyle = const TextStyle(
   color: kWhiteColor,
+  fontSize: 12
+);
+
+TextStyle smallDarkGreyTextStyle = const TextStyle(
+  color: kDarkGreyColor,
   fontSize: 12
 );
 
