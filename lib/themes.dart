@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const double defaultMargin = 16;
+const double defaultMargin = 18;
 const double defaultRadius = 6;
 
 const Color kBlackColor = Color(0xff000000);
@@ -22,6 +22,16 @@ TextStyle regularDarkGreyTextStyle = const TextStyle(
   color: kDarkGreyColor
 );
 
+TextStyle regularDarkGreyBoldTextStyle = TextStyle(
+  color: kDarkGreyColor,
+  fontWeight: bold
+);
+
+TextStyle regularYellowMediumTextStyle = TextStyle(
+  color: kYellowColor,
+  fontWeight: medium
+);
+
 TextStyle h1YellowTextStyle = TextStyle(
   color: kYellowColor,
   fontSize: 26,
@@ -30,13 +40,13 @@ TextStyle h1YellowTextStyle = TextStyle(
 
 TextStyle buttonBlackTextStyle = TextStyle(
   color: kBlackColor,
-  fontSize: 14,
+  fontSize: 15,
   fontWeight: semiBold
 );
 
 TextStyle buttonWhiteTextStyle = TextStyle(
   color: kWhiteColor,
-  fontSize: 14,
+  fontSize: 15,
   fontWeight: semiBold
 );
 

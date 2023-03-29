@@ -1,3 +1,4 @@
+import 'package:exercise1_paml/auth/login_page.dart';
 import 'package:exercise1_paml/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -7,11 +8,11 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: body(),
+      body: body(context),
     );
   }
 
-  Widget body() {
+  Widget body(BuildContext context) {
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.all(defaultMargin),
@@ -39,7 +40,9 @@ class WelcomePage extends StatelessWidget {
             Image.asset('assets/images/pokemon_logo.png', height: 160),
             const Spacer(),
             FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+              },
               backgroundColor: kYellowColor,
               child: const Icon(Icons.arrow_forward_rounded),
             ),
