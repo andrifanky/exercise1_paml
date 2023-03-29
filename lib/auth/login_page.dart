@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formKey = GlobalKey<FormState>();
 
-  final _usernameController = TextEditingController();
+  final _nameController = TextEditingController();
   final _passwordController = TextEditingController();
 
   @override
@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           Text('Name', style: regularYellowMediumTextStyle),
                           const SizedBox(height: 5),
-                          InputTextField(label: 'Name', icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _usernameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name', minLength: 6),
+                          InputTextField(label: 'Name', icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _nameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name', minLength: 6),
                           const SizedBox(height: 20),
                           Text('Password', style: regularYellowMediumTextStyle),
                           const SizedBox(height: 5),

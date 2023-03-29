@@ -1,3 +1,4 @@
+import 'package:exercise1_paml/home/home_page.dart';
 import 'package:exercise1_paml/themes.dart';
 import 'package:exercise1_paml/widgets/input_confirm_password_field.dart';
 import 'package:exercise1_paml/widgets/input_password_field.dart';
@@ -15,7 +16,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   final _formKey = GlobalKey<FormState>();
 
-  final _usernameController = TextEditingController();
+  final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _rePasswordController = TextEditingController();
@@ -81,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       children: [
                         Text('Name', style: regularYellowMediumTextStyle),
                         const SizedBox(height: 5),
-                        InputTextField(label: 'Name', icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _usernameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name', minLength: 6),
+                        InputTextField(label: 'Name', icon: const Icon(Icons.person_rounded, color: kYellowColor), hint: 'Enter your name', textEditingController: _nameController, textInputType: TextInputType.name, textInputAction: TextInputAction.next, validatorMessage: 'Please enter your name', minLength: 6),
                         const SizedBox(height: 15),
                         Text('Email', style: regularYellowMediumTextStyle),
                         const SizedBox(height: 5),
@@ -101,8 +102,8 @@ class _RegisterPageState extends State<RegisterPage> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                // _formKey.currentState!.save();
-                                // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(username: _usernameController.text)));
+                                _formKey.currentState!.save();
+                                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomePage(name: _nameController.text)), (route) => false);
                               }
                             },
                             style: ButtonStyle(

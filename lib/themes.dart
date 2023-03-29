@@ -9,9 +9,15 @@ const Color kGreyColor = Color(0xff999999);
 const Color kDarkGreyColor = Color(0xff657786);
 const Color kLightGreyColor = Color(0xffAAB8C2);
 const Color kYellowColor = Color(0xffECAD00);
+const Color kBlueColor = Color(0xff2196F3);
 
 TextStyle regularBlackTextStyle = const TextStyle(
   color: kBlackColor
+);
+
+TextStyle regularBlackBoldTextStyle = TextStyle(
+  color: kBlackColor,
+  fontWeight: bold
 );
 
 TextStyle regularWhiteTextStyle = const TextStyle(
@@ -24,6 +30,11 @@ TextStyle regularDarkGreyTextStyle = const TextStyle(
 
 TextStyle regularDarkGreyBoldTextStyle = TextStyle(
   color: kDarkGreyColor,
+  fontWeight: bold
+);
+
+TextStyle regularBlueBoldTextStyle = TextStyle(
+  color: kBlueColor,
   fontWeight: bold
 );
 
