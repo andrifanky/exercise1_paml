@@ -87,55 +87,61 @@ class HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(defaultMargin),
                       children: snapshot.data.map<Widget>((e) {
                         return Card(
-                          child: Container(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  flex: 1,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: kGreenColor,
-                                      borderRadius: BorderRadius.circular(10)
+                          child: InkWell(
+                            onTap: () {},
+                            customBorder: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Container(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: kGreenColor,
+                                        borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Image.network(e['image_src']),
                                     ),
-                                    child: Image.network(e['image_src']),
                                   ),
-                                ),
-                                const SizedBox(width: 20),
-                                Expanded(
-                                  flex: 2,
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text("#${e['number']}", style: regularDarkGreyTextStyle),
-                                          const SizedBox(width: 5),
-                                          Expanded(
-                                            child: Text("${e['name'][0].toUpperCase()}${e['name'].substring(1)}", style: regularBlackBoldTextStyle),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 5),
-                                      Row(
-                                        children: e['type'].map<Widget>((e2) {
-                                          return Container(
-                                            decoration: BoxDecoration(
-                                              color: typeColor(e2),
-                                              borderRadius: BorderRadius.circular(5)
+                                  const SizedBox(width: 20),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text("#${e['number']}", style: regularDarkGreyTextStyle),
+                                            const SizedBox(width: 5),
+                                            Expanded(
+                                              child: Text("${e['name'][0].toUpperCase()}${e['name'].substring(1)}", style: regularBlackBoldTextStyle),
                                             ),
-                                            padding: const EdgeInsets.all(3),
-                                            margin: const EdgeInsets.only(right: 4),
-                                            child: Text(e2, style: smallWhiteTextStyle),
-                                          );
-                                        }).toList(),
-                                      ),
-                                      const SizedBox(height: 5),
-                                      Text(e['description'], style: smallDarkGreyTextStyle),
-                                    ],
+                                          ],
+                                        ),
+                                        const SizedBox(height: 5),
+                                        Row(
+                                          children: e['type'].map<Widget>((e2) {
+                                            return Container(
+                                              decoration: BoxDecoration(
+                                                color: typeColor(e2),
+                                                borderRadius: BorderRadius.circular(5)
+                                              ),
+                                              padding: const EdgeInsets.all(3),
+                                              margin: const EdgeInsets.only(right: 4),
+                                              child: Text(e2, style: smallWhiteTextStyle),
+                                            );
+                                          }).toList(),
+                                        ),
+                                        const SizedBox(height: 5),
+                                        Text(e['description'], style: smallDarkGreyTextStyle),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         );
