@@ -153,31 +153,6 @@ class HomePageState extends State<HomePage> {
                   return const CircularProgressIndicator();
                 }),
               ),
-              // child: FutureBuilder<Pokemon>(
-              //   future: fetchPokemon(),
-              //   builder: ((context, snapshot) {
-              //     if (snapshot.hasData) {
-              //       return ListView(
-              //         padding: const EdgeInsets.all(defaultMargin),
-              //         children: snapshot.data!.results.map((e) {
-              //           return Card(
-              //             child: Container(
-              //               padding: const EdgeInsets.all(10),
-              //               child: Row(
-              //                 children: [
-              //                   Text(e.name)
-              //                 ],
-              //               ),
-              //             ),
-              //           );
-              //         }).toList(),
-              //       );
-              //     } else if (snapshot.hasError) {
-              //       return Text('${snapshot.error}');
-              //     }
-              //     return const CircularProgressIndicator();
-              //   }),
-              // ),
             ),
           ),
         ],
