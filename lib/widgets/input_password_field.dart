@@ -51,7 +51,14 @@ class _InputPasswordFieldState extends State<InputPasswordField> {
       keyboardType: widget.textInputType,
       textInputAction: widget.textInputAction,
       obscureText: widget.obscureText,
-      validator: (value) => value.toString().trim().isEmpty ? widget.validatorMessage : null,
+      validator: (value) {
+        if (value.toString().trim().isEmpty) {
+          return widget.validatorMessage;
+        }
+        if (value.toString().trim().length < 6) {
+          return 'Password must be at least 6 characters';
+        }
+      },
     );
   }
 }

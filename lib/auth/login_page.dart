@@ -1,3 +1,4 @@
+import 'package:exercise1_paml/auth/register_page.dart';
 import 'package:exercise1_paml/themes.dart';
 import 'package:exercise1_paml/widgets/input_password_field.dart';
 import 'package:exercise1_paml/widgets/input_text_field.dart';
@@ -95,9 +96,6 @@ class _LoginPageState extends State<LoginPage> {
                                         borderRadius: BorderRadius.circular(30)
                                       )
                                     )
-                                    // shape: OutlineInputBorder(
-                                    //   borderRadius: BorderRadius.circular(10)
-                                    // )
                                   ),
                                   child: Text('Sign In', style: buttonWhiteTextStyle)
                                 ),
@@ -108,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                                   const Text("Don't have an account?"),
                                   TextButton(
                                     onPressed: () {
-                                      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RegisterPage()));
+                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterPage()));
                                     },
                                     child: Text('Sign Up', style: regularYellowMediumTextStyle)
                                   ),
